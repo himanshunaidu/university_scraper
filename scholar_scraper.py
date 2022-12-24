@@ -2,10 +2,10 @@
 #https://python.plainenglish.io/scrape-google-scholar-with-python-fc6898419305#8670
 from parsel import Selector
 import requests, json, re
-def scrape_all_authors():
+def scrape_all_authors(author_name):
     params = {
         'view_op': 'search_authors', # author results
-        'mauthors': 'abney steven',      # search query
+        'mauthors': author_name,      # search query
         'hl': 'en',                  # language of the search
         'astart': 0                  # page number
     }

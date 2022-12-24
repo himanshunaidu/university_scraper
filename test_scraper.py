@@ -5,7 +5,7 @@ import pandas as pd
 
 class TestScraper:
     def __init__(self, faculty_path: str):
-        self.driver = webdriver.Chrome("D:\Anaconda3\chromedriver")
+        self.driver = webdriver.Chrome("D:\Anaconda3\chromedriver") #Could use requests and beautifulsoup4 in tandem like in scholar_scraper instead of selenium
         self.driver.get("https://cse.engin.umich.edu/people/faculty/")
         self.content: str = self.driver.page_source
         self.soup = BeautifulSoup(self.content)
@@ -32,7 +32,7 @@ class TestScraper:
         
         return faculty
     
-    
+
 
         
 

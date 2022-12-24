@@ -28,7 +28,11 @@ class TestScraper:
             faculty_name_list: list = faculty_copy.find("h4").text.split(",")
             faculty_name_list.reverse()
             faculty_name: str = " ".join(faculty_name_list)
-            print(faculty_name)
+            faculty.append(faculty_name)
+        
+        return faculty
+    
+    
 
         
 
